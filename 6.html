@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Outfit:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --green-accent: #22C55E;
+      --green-accent: #ff6200;
       --green-accent-dark: #16A34A;
       --green-accent-light: #DCFCE7;
       --green-primary: #111827;
@@ -29,11 +29,7 @@
       font-family: 'DM Sans', sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background: var(--bg);
@@ -66,11 +62,7 @@
       margin: 0 auto;
     }
 
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+    .header-left { display: flex; align-items: center; gap: 14px; }
 
     .menu-icon {
       width: 40px;
@@ -85,17 +77,9 @@
       border: 1px solid #E5E7EB;
     }
 
-    .menu-icon:hover {
-      background: #E5E7EB;
-      transform: scale(1.05);
-    }
+    .menu-icon:hover { background: #E5E7EB; transform: scale(1.05); }
 
-    .menu-icon svg {
-      width: 18px;
-      height: 18px;
-      color: #374151;
-      stroke-width: 2.5;
-    }
+    .menu-icon svg { width: 18px; height: 18px; color: #374151; stroke-width: 2.5; }
 
     .logo-wrap {
       display: flex;
@@ -105,10 +89,7 @@
       text-decoration: none;
     }
 
-    .logo-row {
-      display: flex;
-      align-items: center;
-    }
+    .logo-row { display: flex; align-items: center; }
 
     .logo-cred {
       font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;
@@ -148,25 +129,30 @@
       margin-top: 1px;
     }
 
-    .user-info {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 1px;
+    /* ✅ NOVO: logo como imagem (header/rodapé) */
+    .brand-logo{
+      display:flex;
+      align-items:center;
+      user-select:none;
+      text-decoration:none;
+      line-height:0;
+    }
+    .brand-logo img{
+      display:block;
+      height: 47px; /* ajuste se quiser */
+      width:auto;
+      max-width: 190px;
+      object-fit: contain;
+    }
+    .footer-logo-img img{
+      height: 20px; /* ajuste se quiser */
+      max-width: 180px;
+      opacity: 0.95;
     }
 
-    .user-name {
-      font-size: 13px;
-      font-weight: 600;
-      color: #111827;
-      max-width: 120px;
-    }
-
-    .user-cpf {
-      font-size: 11px;
-      color: #6B7280;
-      letter-spacing: 0.3px;
-    }
+    .user-info { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+    .user-name { font-size: 13px; font-weight: 600; color: #111827; max-width: 120px; }
+    .user-cpf { font-size: 11px; color: #6B7280; letter-spacing: 0.3px; }
 
     .user-icon-wrapper {
       width: 40px;
@@ -180,17 +166,9 @@
       color: #16A34A;
     }
 
-    .user-icon-wrapper svg {
-      width: 20px;
-      height: 20px;
-      color: #16A34A;
-    }
+    .user-icon-wrapper svg { width: 20px; height: 20px; color: #16A34A; }
 
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .header-right { display: flex; align-items: center; gap: 10px; }
 
     .wrap {
       width: 100%;
@@ -223,11 +201,7 @@
       font-size: 0.95rem
     }
 
-    .consent-list {
-      display: grid;
-      gap: 8px;
-      margin: 12px 0 0
-    }
+    .consent-list { display: grid; gap: 8px; margin: 12px 0 0 }
 
     .consent-item {
       display: flex;
@@ -239,24 +213,11 @@
       border-radius: 10px
     }
 
-    .consent-item svg {
-      flex: 0 0 28px;
-      color: var(--green-accent)
-    }
+    .consent-item svg { flex: 0 0 28px; color: var(--green-accent) }
+    .consent-item strong { color: #111827; }
+    .consent-item .small { color: #6B7280; }
 
-    .consent-item strong {
-      color: #111827;
-    }
-
-    .consent-item .small {
-      color: #6B7280;
-    }
-
-    .btn-row {
-      display: flex;
-      gap: 10px;
-      margin-top: 16px
-    }
+    .btn-row { display: flex; gap: 10px; margin-top: 16px }
 
     .btn {
       flex: 1;
@@ -281,15 +242,8 @@
       background: var(--green-accent-dark);
     }
 
-    .btn.ghost {
-      background: transparent;
-      color: #111827;
-      border: 2px solid #E5E7EB
-    }
-
-    .btn.ghost:hover {
-      background: #F3F4F6;
-    }
+    .btn.ghost { background: transparent; color: #111827; border: 2px solid #E5E7EB }
+    .btn.ghost:hover { background: #F3F4F6; }
 
     .video-container {
       position: relative;
@@ -302,12 +256,7 @@
       transition: all 0.3s ease;
     }
 
-    video {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: opacity 0.3s ease;
-    }
+    video { width: 100%; height: auto; display: block; transition: opacity 0.3s ease; }
 
     .guide {
       position: absolute;
@@ -327,34 +276,13 @@
       display: block;
     }
 
-    .photo-preview {
-      max-width: 360px;
-      margin: 16px auto 0;
-      text-align: center
-    }
+    .photo-preview { max-width: 360px; margin: 16px auto 0; text-align: center }
+    .photo-preview img { width: 100%; border-radius: 12px; transform: scaleX(-1) }
 
-    .photo-preview img {
-      width: 100%;
-      border-radius: 12px;
-      transform: scaleX(-1)
-    }
-
-    .small {
-      font-size: 0.88rem;
-      color: var(--muted)
-    }
-
-    .danger {
-      color: var(--danger)
-    }
-
-    .success {
-      color: var(--success)
-    }
-
-    .hidden {
-      display: none !important
-    }
+    .small { font-size: 0.88rem; color: var(--muted) }
+    .danger { color: var(--danger) }
+    .success { color: var(--success) }
+    .hidden { display: none !important }
 
     .capture-success {
       background: var(--green-accent-light);
@@ -372,22 +300,11 @@
       gap: 8px;
     }
 
-    .capture-success svg {
-      width: 20px;
-      height: 20px;
-      color: var(--green-accent);
-    }
+    .capture-success svg { width: 20px; height: 20px; color: var(--green-accent); }
 
     @keyframes fadeInScale {
-      from {
-        opacity: 0;
-        transform: scale(0.9);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     .loading-overlay {
@@ -402,10 +319,7 @@
       align-items: center;
       justify-content: center;
     }
-
-    .loading-overlay.active {
-      display: flex;
-    }
+    .loading-overlay.active { display: flex; }
 
     .loading-content {
       background: white;
@@ -425,17 +339,9 @@
       margin: 0 auto 20px;
     }
 
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
-    .loading-text {
-      font-size: 16px;
-      font-weight: 600;
-      color: #111827;
-    }
+    .loading-text { font-size: 16px; font-weight: 600; color: #111827; }
 
     footer.site-footer {
       margin-top: auto;
@@ -457,11 +363,7 @@
       gap: 10px;
     }
 
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      user-select: none;
-    }
+    .footer-logo { display: flex; align-items: center; user-select: none; }
 
     .footer-logo .fl-cred {
       font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;
@@ -470,7 +372,6 @@
       color: #6B7280;
       letter-spacing: -0.5px;
     }
-
     .footer-logo .fl-diamond {
       width: 5px;
       height: 5px;
@@ -481,7 +382,6 @@
       display: inline-block;
       vertical-align: middle;
     }
-
     .footer-logo .fl-on {
       font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;
       font-weight: 800;
@@ -490,32 +390,13 @@
       letter-spacing: -0.5px;
     }
 
-    footer small {
-      font-size: 11px;
-      opacity: 0.75;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    footer small strong {
-      color: #16A34A;
-      font-weight: 600;
-    }
+    footer small { font-size: 11px; opacity: 0.75; line-height: 1.5; text-align: center; }
+    footer small strong { color: #16A34A; font-weight: 600; }
 
     @media (max-width:420px) {
-      .guide .ring {
-        width: 180px;
-        height: 210px
-      }
-
-      .card {
-        margin: 10px;
-        padding: 16px;
-      }
-
-      .wrap {
-        padding: 16px;
-      }
+      .guide .ring { width: 180px; height: 210px }
+      .card { margin: 10px; padding: 16px; }
+      .wrap { padding: 16px; }
     }
   </style>
 </head>
@@ -529,9 +410,19 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </div>
+
+        <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+        <a class="brand-logo" href="#" aria-label="Itaú / AgilizaCred">
+          <img src="/images/itau2.png" alt="Itaú">
+        </a>
+
+        <!-- (se quiser manter a logo antiga também, descomente) -->
+        <!--
         <div class="logo-wrap">
-          <div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div><span class="logo-tagline">Crédito Fácil</span>
+          <div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div>
+          <span class="logo-tagline">Crédito Fácil</span>
         </div>
+        -->
       </div>
       <div class="header-right">
         <div class="user-info">
@@ -629,10 +520,13 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-logo">
-        <span class="fl-cred">Agiliza</span><span class="fl-on">Cred</span>
-      </div>
-      <small><strong>AgilizaCred Soluções Financeiras Ltda.</strong><br>CNPJ: 36.947.229/0001-85 – São Paulo, SP –
+
+      <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+      <a class="brand-logo footer-logo-img" href="#" aria-label="Itaú / AgilizaCred">
+        <img src="/images/itau2.png" alt="Itaú">
+      </a>
+
+      <small><strong>Itaú Unibanco S.A</strong><br>CNPJ: 36.947.229/0001-85 – São Paulo, SP –
         01310-200</small>
     </div>
   </footer>
@@ -760,11 +654,8 @@
         return;
       }
 
-      try {
-        localStorage.setItem('nbk_captured_photo', capturedDataUrl);
-      } catch (e) {
-        console.warn('Erro ao salvar no localStorage', e);
-      }
+      try { localStorage.setItem('nbk_captured_photo', capturedDataUrl); }
+      catch (e) { console.warn('Erro ao salvar no localStorage', e); }
 
       btnUse.disabled = true;
       btnUse.innerHTML = '<svg style="width:16px;height:16px;margin-right:6px" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Confirmando...';
@@ -780,7 +671,8 @@
         document.body.appendChild(confirmMsg);
 
         setTimeout(() => {
-          window.location.href = '7.html';
+          const p = new URLSearchParams(window.location.search);
+          window.location.href = '7.html' + (p.toString() ? '?' + p : '');
         }, 1200);
       }, 800);
     });
@@ -788,7 +680,5 @@
     window.addEventListener('pagehide', () => stopCamera());
     window.addEventListener('beforeunload', () => stopCamera());
   </script>
-
-
 
 </body></html>
